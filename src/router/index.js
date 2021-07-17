@@ -87,11 +87,11 @@ const routes = [
     }
   },
   {
-    path: '/sales',
-    name: 'sales',
+    path: '/mysales',
+    name: 'mysales',
     components: {
       NavBar,
-      default: () => import('../views/DashboardSeller/Sales.vue')
+      default: () => import('../views/DashboardSeller/MySales.vue')
     }
   },
   {
