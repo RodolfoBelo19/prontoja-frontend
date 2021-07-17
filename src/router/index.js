@@ -95,6 +95,14 @@ const routes = [
     }
   },
   {
+    path: '/myproducts',
+    name: 'myproducts',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/MyProducts.vue')
+    }
+  },
+  {
     path: '/paysuccess',
     name: 'paysuccess',
     components: {
