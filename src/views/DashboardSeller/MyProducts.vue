@@ -23,7 +23,7 @@
         <span class="bold">20/85 (2 variantes)</span>
       </div>
       <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
         <v-icon>mdi-trash-can-outline</v-icon>
       </div>
     </div>
@@ -43,7 +43,7 @@
         <span class="bold">45/62 (1 variantes)</span>
       </div>
       <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
         <v-icon>mdi-trash-can-outline</v-icon>
       </div>
       
@@ -110,6 +110,9 @@ export default {
   text-decoration: none;
   margin: 0 0 20px 10px;
 }
+.v-content__wrap {
+  padding: 0px 20px;
+}
 .date {
   color: #a7a7a7 !important;
 }
@@ -122,6 +125,9 @@ export default {
 }
 .mdi-trash-can-outline {
   color: #DADADA !important;
+}
+.opacity {
+  opacity: 0.55;
 }
 .mdi-plus {
   color: #59BB77 !important;
@@ -138,7 +144,7 @@ export default {
   align-items: center;
 }
 .btn-white {
-  margin-left: 70px;
+  margin-left: 180px;
   margin-top: 10px;
   padding: 10px;
   width: 239.5px;
@@ -241,18 +247,19 @@ export default {
 .my-product {
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 4px 10px;
 }
 .info-my-product {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  z-index: 50;
 }
 .rectangle {
   background: #E8F5EC;
-  opacity: 0.55;
 }
 .icon-my-product {
   display: flex;
