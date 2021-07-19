@@ -6,17 +6,58 @@
         Voltar
       </a>
     </div>
-    <h3 class="text-h3">Meus Produtos</h3>
+    <h3 class="text-h3">Meus Produtos </h3>
     <div class="my-product">
       <div class="info-my-product">
-        <span id="first">Produtooooooooooooooo</span>
+        <span>Produtooooooooooooooo</span>
         <span class="bold">0/100 (3 variantes)</span>
       </div>
       <div class="icon-my-product">
         <v-icon class="icon-pencil">mdi-pencil</v-icon>
         <v-icon>mdi-trash-can-outline</v-icon>
       </div>
+    </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product">
+        <span>Produtooooooooooooooo</span>
+        <span class="bold">20/85 (2 variantes)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    <div class="my-product">
+      <div class="info-my-product">
+        <span>Produtooooooooooooooo</span>
+        <span class="bold">35/250 (1 variantes)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product ">
+        <span>Produtooooooooooooooo</span>
+        <span class="bold">45/62 (1 variantes)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
       
+      
+    </div>
+    <div class="button-wrapper">
+        <button class="btn-white">
+          <v-icon class="vector">mdi-plus</v-icon>
+          <span>Agregar Novo Produto</span>
+        </button> 
+        <button class="btn-white">
+          <v-icon>mdi-plus</v-icon>
+          <span>Agregar Plano Recorrente</span>
+        </button> 
     </div>
   </v-container>
   
@@ -76,8 +117,51 @@ export default {
   color: #666666;
   font-family: "Poppins";
 }
-.v-icon.v-icon {
-  color: #59bb77;
+.mdi-pencil {
+  color: #59bb77 !important;
+}
+.mdi-trash-can-outline {
+  color: #DADADA !important;
+}
+.mdi-plus {
+  color: #59BB77 !important;
+  width: 40px;
+  font-size: 15px !important;
+}
+.button-wrapper {
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-white {
+  margin-left: 70px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 239.5px;
+  height: 43.72px;
+  border: 1px solid #59BB77;
+  box-sizing: border-box;
+  border-radius: 40px;
+  right: 80px;
+  top: 50px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #59BB77;
+}
+.icon-plus {
+  width: 19px;
+  height: 19px;
 }
 .bold{
   font-weight: 900;
@@ -161,12 +245,15 @@ export default {
   align-items: center;
   margin: 0 auto;
 }
-
 .info-my-product {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
-
+.rectangle {
+  background: #E8F5EC;
+  opacity: 0.55;
+}
 .icon-my-product {
   display: flex;
   flex-direction: row;
