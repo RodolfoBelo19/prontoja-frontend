@@ -9,11 +9,11 @@
     <h3 class="text-h3">Meus Produtos</h3>
     <div class="my-product">
       <div class="info-my-product">
-        <span class="font-normal">Produtoooooooooooooooo</span>
+        <span id="first">Produtoooooooooooooooo</span>
         <span class="bold">0/100 (3 variantes)</span>
       </div>
       <div class="icon-my-product">
-        <v-icon>mdi-pencil</v-icon>
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
         <v-icon>mdi-trash-can-outline</v-icon>
       </div>
       
@@ -72,9 +72,12 @@ export default {
 .date {
   color: #a7a7a7 !important;
 }
-.font-normal{
+.font-normal {
   color: #666666;
   font-family: "Poppins";
+}
+.v-icon.v-icon {
+  color: #59bb77;
 }
 .bold{
   font-weight: 900;
