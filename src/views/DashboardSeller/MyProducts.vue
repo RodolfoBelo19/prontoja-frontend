@@ -9,7 +9,7 @@
     <h3 class="text-h3">Meus Produtos</h3>
     <div class="my-product">
       <div class="info-my-product">
-        <span id="first">Produtoooooooooooooooo</span>
+        <span id="first">Produtooooooooooooooo</span>
         <span class="bold">0/100 (3 variantes)</span>
       </div>
       <div class="icon-my-product">
