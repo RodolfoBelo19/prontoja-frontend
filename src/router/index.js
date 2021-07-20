@@ -95,6 +95,14 @@ const routes = [
     }
   },
   {
+    path: '/newproductorservice',
+    name: 'newproductorservice',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/NewProductOrService.vue')
+    }
+  },
+  {
     path: '/myproducts',
     name: 'myproducts',
     components: {
