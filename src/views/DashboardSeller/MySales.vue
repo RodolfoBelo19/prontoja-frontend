@@ -14,10 +14,39 @@
       </div>
       <div class="condition">
         <span class="bold unsent">preparando envio</span>
-        <button><v-icon>mdi-chevron-down</v-icon></button>
+        <button><v-icon>mdi-chevron-up</v-icon></button>
       </div>
     </div>
-    <div class="sale-details">
+    <div class="test">
+      <div class="status-details">
+        <div class="content-center-status">
+          <span class="bold font">Rua, Número, Complemento, CEP, Cidade</span>
+          <div class="input-container">
+            <label class="input-title">Estado da Entrega</label>
+            <input
+              type="text"
+              id="place-1"
+              placeholder="Preparando envio"
+              class="rectangle-title-select"
+            /> 
+          </div>
+          <div class="input-container">
+            <label class="input-title">Nota sobre envio</label>
+            <input
+              type="text"
+              id="place"
+              placeholder="Lorem ipsum dolor sit amet..."
+              class="rectangle-title"
+            />
+          </div>
+          <div class="content-center-status-fiel">
+            <span class="bold font">Variante do Produto (2 unidades)</span>
+            <span class="">Numero de Pedido: <strong class="font">154585</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sale-details gray opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
         <span>Produtooooooooooooooo</span>
@@ -27,7 +56,7 @@
         <button><v-icon>mdi-chevron-down</v-icon></button>
       </div>
     </div>
-    <div class="sale-details">
+    <div class="sale-details opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
         <span>Produtooooooooooooooo</span>
@@ -37,7 +66,7 @@
         <button><v-icon>mdi-chevron-down</v-icon></button>
       </div>
     </div>
-    <div class="sale-details">
+    <div class="sale-details gray opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
         <span>Produtooooooooooooooo</span>
@@ -72,6 +101,9 @@ export default {
   transform: translate(-50%, -50%); */
   /* margin-top: 10%; */
 }
+.gray {
+  background: #DADADA;
+}
 .text-h3 {
   font-family: "Baloo 2";
   font-style: normal;
@@ -93,6 +125,24 @@ export default {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  padding: 5px;
+}
+.status-details {
+  width: 351px;
+  height: 247px;
+  background: rgba(89, 187, 119, 0.14);
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.test {
+  padding: 0 8px;
+}
+.opacity {
+  opacity: 0.5;
+}
+.content-center-status {
+  padding: 0 25px;
 }
 .back {
   font-family: Poppins;
@@ -125,6 +175,9 @@ export default {
 .bold{
   font-weight: 900;
   font-family: "Poppins";
+}
+.font {
+  color: #666666;
 }
 .text-p {
   font-family: "Baloo 2";
@@ -197,5 +250,94 @@ export default {
 }
 span {
   font-size: 13px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  
+  position: relative;
+}
+.input-title {
+  position: absolute;
+  left: 8px;
+  top: 3.2px;
+  font-size: 12px;
+  font-family: "Poppins";
+  padding: 0 5px;
+
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #B8B8B8;
+  
+}
+.content-center-status-fiel {
+  padding: 6px 5px;
+  width: 292px;
+  height: 119px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.input-tile label {
+    -webkit-box-shadow: 5px 5px 10px #666;
+    -moz-box-shadow: 5px 5px 10px #666;
+    box-shadow: 5px 5px 10px #666;
+}
+.rectangle-title-select {
+  width: 230px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 12px;
+  
+}
+.rectangle-title {
+  width: 363px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 12px;
+}
+#place::placeholder {
+  width: 252px;
+  height: 23px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  margin-left: 10px;
+  /* identical to box height, or 22px */
+  letter-spacing: -0.02em;
+  color: #666666;
+}
+#place-1::placeholder {
+  width: 252px;
+  height: 23px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  margin-left: 10px;
+  /* identical to box height, or 22px */
+  letter-spacing: -0.02em;
+  color: #FF4E02;
+  font-weight: 900;
+  font-family: "Poppins";
 }
 </style>
