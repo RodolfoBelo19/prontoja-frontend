@@ -87,7 +87,7 @@ export default {
   margin: 0 0 16px 10px;
 }
 .sale-details {
-  width: 80%;
+  width: 90%;
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
@@ -194,5 +194,8 @@ export default {
   letter-spacing: -0.02em;
 
   color: #b8b8b8;
+}
+span {
+  font-size: 13px;
 }
 </style>

@@ -116,7 +116,7 @@
        
       </div>
       <div class="final-buttons">
-        <button class="btn-white">salvar</button>
+        <button class="btn-white">Salvar</button>
         <button class="btn-green">Gerar Botão/Link</button>
       </div>
     </div>
