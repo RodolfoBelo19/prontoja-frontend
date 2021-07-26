@@ -10,38 +10,55 @@
     <div class="sale-details">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
-        <span>Produtooooooooooooooo</span>
+        <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
         <span class="bold unsent">preparando envio</span>
         <button><v-icon>mdi-chevron-up</v-icon></button>
       </div>
     </div>
-    <div class="test">
+    <div class="status">
       <div class="status-details">
         <div class="content-center-status">
           <span class="bold font">Rua, Número, Complemento, CEP, Cidade</span>
           <div class="input-container">
             <label class="input-title">Estado da Entrega</label>
-            <input
-              type="text"
-              id="place-1"
-              placeholder="Preparando envio"
-              class="rectangle-title-select"
-            /> 
+            <div class="select-wrapper">
+              <span><v-icon>mdi-chevron-down</v-icon></span>
+              <select
+                type="text"
+                id="place-1"
+                class="rectangle-title-select bold unsent"
+              >
+                <option value="Preparando envio" selected class="bold unsent" id="unsent">preparando envio</option>
+                <option value="Preparando envio" class="bold sent" id="sent">a caminho</option>
+                <option value="Preparando envio" class="bold done" id="done">entregue</option>
+              </select> 
+            </div>
           </div>
           <div class="input-container">
             <label class="input-title">Nota sobre envio</label>
-            <input
+            <div class="sale-desc-wrapper">
+              <span class="sale-correct-wrapper"><v-icon class="sale-correct">mdi-check</v-icon></span>
+              <textarea
               type="text"
               id="place"
-              placeholder="Lorem ipsum dolor sit amet..."
+              placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
               class="rectangle-title"
-            />
+            ></textarea>
+            </div>
           </div>
-          <div class="content-center-status-fiel">
-            <span class="bold font">Variante do Produto (2 unidades)</span>
-            <span class="">Numero de Pedido: <strong class="font">154585</strong></span>
+          <div class="content-center-status-field">
+            <div class="status-content">
+              <span class="bold font">Variante do Produto (2 unidades)</span>
+              <button class="bt-small-green font-white">Editar</button>
+            </div>
+            <span class="font">Numero de Pedido: <strong class="font">154585</strong></span>
+            <br>
+            <span class="font">Valor da venda: <strong class="font">R$ total</strong></span>
+            <span class="font">Pagamento: <img src="../../assets/visa.png" alt=""><strong class="font"> 8546</strong><span class="bold done"> confirmado</span></span>
+            <br>
+            <span class="font">Contato Cliente: <strong class="font" style="text-decoration: underline">(dd) 12345-1234, cliente@gmail.com</strong></span>
           </div>
         </div>
       </div>
@@ -49,7 +66,7 @@
     <div class="sale-details gray opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
-        <span>Produtooooooooooooooo</span>
+        <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
         <span class="bold sent">a caminho</span>
@@ -59,7 +76,7 @@
     <div class="sale-details opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
-        <span>Produtooooooooooooooo</span>
+        <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
         <span class="bold done">entregue</span>
@@ -69,7 +86,7 @@
     <div class="sale-details gray opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
-        <span>Produtooooooooooooooo</span>
+        <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
         <span class="bold done">entregue</span>
@@ -124,25 +141,62 @@ export default {
   margin-inline: auto;
   justify-content: space-between;
   text-align: center;
-  align-items: center;
   padding: 5px;
+}
+.sale-correct {
+  color: #59BB77 !important; 
+}
+.sale-desc-wrapper {
+  position: relative;
+}
+.sale-correct-wrapper {
+  position: absolute;
+  left: 320px;
+  top: 45px;
 }
 .status-details {
   width: 351px;
-  height: 247px;
+  height: auto;
   background: rgba(89, 187, 119, 0.14);
   display: flex;
   width: 100%;
   margin-bottom: 15px;
 }
-.test {
+.status {
   padding: 0 8px;
+}
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper span {
+  position: absolute;
+  z-index: 10;
+  left: 190px;
+  top: 18px;
+}
+label {
+  background: #fff; 
+  padding: 0px; 
+  height: 12px;
+  z-index: 10;
 }
 .opacity {
   opacity: 0.5;
 }
 .content-center-status {
   padding: 0 25px;
+  min-width: 240px;
+}
+.content-center-status-field {
+  min-width: 240px;
+  width: 100% !important;
+
+}
+.status-content {
+  display: flex;
+  width: 100%;
+  min-width: 240px;
+  justify-content: space-between;
 }
 .back {
   font-family: Poppins;
@@ -178,6 +232,13 @@ export default {
 }
 .font {
   color: #666666;
+  font-family: "Poppins";
+}
+.font-white {
+  color: #ffffff;
+  font-family: "Poppins";
+  text-align: center;
+  font-size: 11.5px;
 }
 .text-p {
   font-family: "Baloo 2";
@@ -260,28 +321,30 @@ span {
 .input-title {
   position: absolute;
   left: 8px;
-  top: 3.2px;
+  top: 6.7px;
   font-size: 12px;
   font-family: "Poppins";
-  padding: 0 5px;
-
+  border-radius: 5px ;
   font-style: normal;
   font-weight: normal;
   line-height: 150%;
   /* or 15px */
-
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
-
   color: #B8B8B8;
-  
 }
-.content-center-status-fiel {
+.bt-small-green {
+  width: 95px;
+  background: #59BB77;
+  box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
+  border-radius: 20px;
+}
+.content-center-status-field {
   padding: 6px 5px;
-  width: 292px;
-  height: 119px;
+  width: 380px;
+  height: 150px;
   font-size: 13px;
   display: flex;
   flex-direction: column;
@@ -298,7 +361,7 @@ span {
   border: 1px solid #d3d3d3;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 10px;
+  padding: 0px 10px;
   margin-top: 12px;
   
 }
@@ -324,20 +387,5 @@ span {
   /* identical to box height, or 22px */
   letter-spacing: -0.02em;
   color: #666666;
-}
-#place-1::placeholder {
-  width: 252px;
-  height: 23px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 150%;
-  margin-left: 10px;
-  /* identical to box height, or 22px */
-  letter-spacing: -0.02em;
-  color: #FF4E02;
-  font-weight: 900;
-  font-family: "Poppins";
 }
 </style>
