@@ -111,6 +111,22 @@ const routes = [
     }
   },
   {
+    path: '/productedit',
+    name: 'productedit',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/ProductEdit.vue')
+    }
+  },
+  {
+    path: '/prodnotfound',
+    name: 'prodnotfound',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/ProdNotFound.vue')
+    }
+  },
+  {
     path: '/paysuccess',
     name: 'paysuccess',
     components: {

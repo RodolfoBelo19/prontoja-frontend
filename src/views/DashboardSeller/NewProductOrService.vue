@@ -352,8 +352,6 @@ input {
 }
 
 .my-product i:before {
-  width: 28px;
-  height: 28px;
   font-size: 28px;
 }
 

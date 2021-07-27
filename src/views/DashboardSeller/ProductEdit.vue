@@ -9,56 +9,22 @@
     <h3 class="text-h3">Meus Produtos </h3>
     <div class="my-product">
       <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">0/100 (3 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-    </div>
-    <div class="my-product rectangle">
-      <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">20/85 (2 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
+        <div class="info-my-product-content">
+            <span class="font-red">Produtooooooooooooooo</span>
+            <span class="bold">0/100 (3 variantes)</span>
+        </div>
+        <div class="center-edit">
+            <p>Confirma que quer apagar este produto?</p>
+            <br>
+            <p>Fazendo isso o link e botão de compra ficará inativo.</p>
+            <div class="button-align">
+                <button class="btn-cancel">Cancelar</button>
+                <button class="btn-confirm">Confirmar</button>
+            </div>
+        </div>
       </div>
     </div>
-    <div class="my-product">
-      <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">35/250 (1 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-    </div>
-    <div class="my-product rectangle">
-      <div class="info-my-product ">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">45/62 (1 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-      
-      
-    </div>
-    <div class="button-wrapper">
-        <button class="btn-white">
-          <v-icon class="vector">mdi-plus</v-icon>
-          <span>Agregar Novo Produto</span>
-        </button> 
-        <button class="btn-white">
-          <v-icon>mdi-plus</v-icon>
-          <span>Agregar Plano Recorrente</span>
-        </button> 
-    </div>
+    
   </v-container>
   
 </template>
@@ -111,7 +77,7 @@ export default {
   margin: 0 0 20px 10px;
 }
 .v-content__wrap {
-  padding: 0px 20px;
+  padding: 0px 5px;
 }
 .date {
   color: #a7a7a7 !important;
@@ -175,7 +141,7 @@ export default {
 .bold{
   font-weight: 900;
   font-family: "Poppins";
-  color: #666666;
+  color: #FF4E02;
 }
 .text-p {
   font-family: "Baloo 2";
@@ -203,22 +169,35 @@ export default {
 
   color: #666666;
 }
-
 .otp {
   height: 130px;
   width: 100%;
   background-color: #e9e9e9;
   padding: 10px;
 }
-
-.btn-pr {
-  width: 85%;
-  height: 55px !important;
-  margin-left: 5%;
+.btn-cancel {
+  width: 122.43px;
+  height: 86.7px !important;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
   border-radius: 20px;
-  margin-top: 5%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #ffffff !important;
+}
+.btn-confirm {
+  width: 122.43px;
+  height: 86.7px !important;
+  background: #B8B8B8 !important;
+  box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
+  border-radius: 20px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -261,15 +240,32 @@ export default {
   padding: 10px;
   z-index: 50;
 }
-.rectangle {
-  background: #E8F5EC;
+.info-my-product-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
 }
-.icon-my-product {
-  display: flex;
-  flex-direction: row;
-  width: 66px;
-  justify-content: space-between;
+.center-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    margin: 40px 0 40px 0;
 }
-
+.button-align {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 82%;
+    margin-inline: auto;
+    margin-top: 150px;
+}
+.font-red {
+    color: #FF4E02;
+}
+span, p {
+    font-family: "Poppins";
+}
 
 </style>
