@@ -11,7 +11,7 @@
       <div class="info-my-product">
         <div class="info-my-product-content">
             <span class="font-red">Produtooooooooooooooo</span>
-            <span class="bold">0/100 (3 variantes)</span>
+            <span class="bold">R$150,69 0/100</span>
         </div>
         <div class="center-edit">
             <p>Confirma que quer apagar este produto?</p>
