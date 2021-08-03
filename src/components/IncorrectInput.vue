@@ -1,6 +1,6 @@
 <template>
   <div class="input-container">
-    <label class="input-title">Nota sobre envio</label>
+    <label class="input-title">{{ title }}</label>
     <div class="sale-desc-wrapper">
       <span class="sale-correct-wrapper"
         ><v-icon class="sale-correct">mdi-close</v-icon></span
@@ -13,6 +13,7 @@
 <script>
 export default {
   name: "Incorrect",
+  props: ["title"]
 };
 </script>
 
