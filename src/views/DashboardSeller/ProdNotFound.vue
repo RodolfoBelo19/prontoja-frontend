@@ -1,10 +1,10 @@
 <template>
   <v-container class="vertical-center">
     <div class="product-container">
-      <a href="#" class="back"> 
+      <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
         Voltar
-      </a>
+      </router-link>
     </div>
     <div class="info-prod-notfound">
       <h2 class="gray-title">ups... este produto não existe mais</h2>

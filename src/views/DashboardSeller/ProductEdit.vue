@@ -1,10 +1,10 @@
 <template>
   <v-container class="vertical-center">
     <div class="product-container">
-      <a href="#" class="back"> 
+      <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
         Voltar
-      </a>
+      </router-link>
     </div>
     <h3 class="text-h3">Meus Produtos </h3>
     <div class="my-product">

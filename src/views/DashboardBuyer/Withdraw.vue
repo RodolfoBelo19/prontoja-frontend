@@ -1,5 +1,11 @@
 <template>
   <v-container class="">
+    <div class="product-container">
+      <router-link to="/" class="back"> 
+        <v-icon>mdi-chevron-left</v-icon>
+        Voltar
+      </router-link>
+    </div>
     <h3 class="text-h3" style="margin-top: 10%">Sacar Saldo</h3>
     <div class="vertical-center">
       <div class="bank">
@@ -52,6 +58,20 @@ export default {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-top: 10%;
+}
+.product-container {
+  margin: 0 0 16px 10px;
+}
+.back {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #C1C1C1 !important;
+  text-decoration: none;
+  margin: 0 0 20px -10px;
 }
 .bank-subtitle {
   font-family: "Poppins";
