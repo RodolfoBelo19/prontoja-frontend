@@ -1,76 +1,149 @@
 <template>
   <v-container class="vertical-center">
     <div class="sales-container">
-      <router-link to="/" class="back"> 
+      <router-link to="/" class="back">
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3">Minhas Vendas</h3>
-    <div class="sale-details">
-      <div style="display: flex; justify-content: space-between; width: 58%">
-        <span class="bold date">dd/mm</span>
+    <h3 class="text-h3">My Sales</h3>
+    <h3 class="text-h4">Balance: R$ 250</h3>
+    <div class="test">
+      <div class="sale-details">
+        <div class="sale-details-content">
+          <span class="bold date">09/06</span>
+          <span class="font">Produtooooooooooooooo</span>
+        </div>
+        <div class="condition">
+          <span class="bold unsent">Being prepared</span>
+          <button class="bt"><v-icon>mdi-chevron-up</v-icon></button>
+        </div>
+      </div>
+      <div class="status">
+          <div class="status-details">
+            <div class="content-center-status">
+              <span class="bold font"
+                >Street, Number, Complement, Postal Code, City</span
+              >
+              <div class="input-container">
+                <label class="input-title">Delivery Status</label>
+                <div class="select-wrapper">
+                  <span><v-icon>mdi-chevron-down</v-icon></span>
+                  <select
+                    type="text"
+                    id="place-1"
+                    class="rectangle-title-select bold sent"
+                  >
+                    <option
+                      value="Preparando envio"
+                      selected
+                      class="bold sent"
+                      id="unsent"
+                    >
+                      On the way
+                    </option>
+                    <option
+                      value="Preparando envio"
+                      class="bold sent"
+                      id="sent"
+                    >
+                      a caminho
+                    </option>
+                    <option
+                      value="Preparando envio"
+                      class="bold done"
+                      id="done"
+                    >
+                      entregue
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-container">
+                <label class="input-title">Delivery Note</label>
+                <div class="sale-desc-wrapper">
+                  <span class="sale-correct-wrapper"
+                    ><v-icon class="sale-correct">mdi-check</v-icon></span
+                  >
+                  <textarea
+                    type="text"
+                    id="place"
+                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                    class="rectangle-title"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="content-center-status-field">
+                <div class="status-content">
+                  <span class="bold font">Product Variant (2 units)</span>
+                  <button class="bt-small-green font-white">Editar</button>
+                </div>
+                <span class="font"
+                  >Order Number: <strong class="font">154585</strong></span
+                >
+                <br />
+                <span class="font"
+                  >Order value: <strong class="font">R$ total</strong></span
+                >
+                <span class="font"
+                  >Payment: <img src="../../assets/visa.png" alt="" /><strong
+                    class="font"
+                  >
+                    8546</strong
+                  ><span class="bold done"> confirmed</span></span
+                >
+                <br />
+                <span class="font"
+                  >Contato Cliente:
+                  <strong class="font" style="text-decoration: underline"
+                    >(dd) 12345-1234, cliente@gmail.com</strong
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- <div class="sale-details">
+      <div class="sale-details-content">
+        <span class="bold date">09/06</span>
         <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
-        <span class="bold unsent">preparando envio</span>
-        <button><v-icon>mdi-chevron-up</v-icon></button>
+        <span class="bold sent">On the way</span>
+        <button class="bt"><v-icon>mdi-chevron-up</v-icon></button>
       </div>
     </div>
-    <div class="status">
-      <div class="status-details">
-        <div class="content-center-status">
-          <span class="bold font">Rua, Número, Complemento, CEP, Cidade</span>
-          <div class="input-container">
-            <label class="input-title">Estado da Entrega</label>
-            <div class="select-wrapper">
-              <span><v-icon>mdi-chevron-down</v-icon></span>
-              <select
-                type="text"
-                id="place-1"
-                class="rectangle-title-select bold unsent"
-              >
-                <option value="Preparando envio" selected class="bold unsent" id="unsent">preparando envio</option>
-                <option value="Preparando envio" class="bold sent" id="sent">a caminho</option>
-                <option value="Preparando envio" class="bold done" id="done">entregue</option>
-              </select> 
-            </div>
-          </div>
-          <div class="input-container">
-            <label class="input-title">Nota sobre envio</label>
-            <div class="sale-desc-wrapper">
-              <span class="sale-correct-wrapper"><v-icon class="sale-correct">mdi-check</v-icon></span>
-              <textarea
-              type="text"
-              id="place"
-              placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
-              class="rectangle-title"
-            ></textarea>
-            </div>
-          </div>
-          <div class="content-center-status-field">
-            <div class="status-content">
-              <span class="bold font">Variante do Produto (2 unidades)</span>
-              <button class="bt-small-green font-white">Editar</button>
-            </div>
-            <span class="font">Numero de Pedido: <strong class="font">154585</strong></span>
-            <br>
-            <span class="font">Valor da venda: <strong class="font">R$ total</strong></span>
-            <span class="font">Pagamento: <img src="../../assets/visa.png" alt=""><strong class="font"> 8546</strong><span class="bold done"> confirmado</span></span>
-            <br>
-            <span class="font">Contato Cliente: <strong class="font" style="text-decoration: underline">(dd) 12345-1234, cliente@gmail.com</strong></span>
-          </div>
-        </div>
+    <div class="sale-details">
+      <div class="sale-details-content">
+        <span class="bold date">09/06</span>
+        <span class="font">Produtooooooooooooooo</span>
+      </div>
+      <div class="condition">
+        <span class="bold done">Delivered</span>
+        <button class="bt"><v-icon>mdi-chevron-up</v-icon></button>
       </div>
     </div>
-    <div class="sale-details gray opacity">
+    <div class="sale-details">
+      <div class="sale-details-content">
+        <span class="bold date">09/06</span>
+        <span class="font">Produtooooooooooooooo</span>
+      </div>
+      <div class="condition">
+        <span class="bold done">Delivered</span>
+        <button class="bt"><v-icon>mdi-chevron-up</v-icon></button>
+      </div>
+    </div> -->
+
+    <!-- <div class="sale-details gray opacity">
       <div style="display: flex; justify-content: space-between; width: 58%">
         <span class="bold date">dd/mm</span>
         <span class="font">Produtooooooooooooooo</span>
       </div>
       <div class="condition">
         <span class="bold sent">a caminho</span>
-        <button><v-icon>mdi-chevron-down</v-icon></button>
+        <button class="bt"><v-icon>mdi-chevron-down</v-icon></button>
       </div>
     </div>
     <div class="sale-details opacity">
@@ -92,7 +165,7 @@
         <span class="bold done">entregue</span>
         <button><v-icon>mdi-chevron-down</v-icon></button>
       </div>
-    </div>
+    </div> -->
   </v-container>
 </template>
 
@@ -119,7 +192,7 @@ export default {
   /* margin-top: 10%; */
 }
 .gray {
-  background: #DADADA;
+  background: #dadada;
 }
 .text-h3 {
   font-family: "Baloo 2";
@@ -130,7 +203,18 @@ export default {
   letter-spacing: -0.02em;
   /* margin-left: 20px; */
   color: #303030;
-  margin: 0 0 30px 35px
+  margin: 0 0 10px 35px;
+}
+.text-h4 {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  /* margin-left: 20px; */
+  color: #303030;
+  margin: 0 0 15px 35px;
 }
 .sales-container {
   margin: 0 0 16px 10px;
@@ -142,9 +226,21 @@ export default {
   justify-content: space-between;
   text-align: center;
   padding: 5px;
+  background: #e9e9e9;
+  border-radius: 6px;
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
+}
+.sale-details-content {
+  display: flex;
+  text-align: left;
+  flex-direction: column !important;
+  justify-content: space-between;
+  width: 58%;
+  margin: 0px 10px 0 10px;
 }
 .sale-correct {
-  color: #59BB77 !important; 
+  color: #59bb77 !important;
 }
 .sale-desc-wrapper {
   position: relative;
@@ -154,10 +250,22 @@ export default {
   left: 320px;
   top: 45px;
 }
+.test {
+  width: 90%;
+  display: flex;
+  margin-inline: auto;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px;
+  background: #e9e9e9;
+  border-radius: 6px;
+  padding: 10px 0 10px 0;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
 .status-details {
-  width: 351px;
+  width: 100%;
   height: auto;
-  background: rgba(89, 187, 119, 0.14);
   display: flex;
   width: 100%;
   margin-bottom: 15px;
@@ -175,10 +283,13 @@ export default {
   top: 18px;
 }
 label {
-  background: #fff; 
-  padding: 0px; 
+  background: #fff;
+  padding: 0px;
   height: 12px;
   z-index: 10;
+}
+.bt {
+  height: 10%;
 }
 .opacity {
   opacity: 0.5;
@@ -190,7 +301,6 @@ label {
 .content-center-status-field {
   min-width: 240px;
   width: 100% !important;
-
 }
 .status-content {
   display: flex;
@@ -205,33 +315,34 @@ label {
   font-size: 18px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: #C1C1C1 !important;
+  color: #c1c1c1 !important;
   text-decoration: none;
   margin: 0 0 20px 10px;
 }
 .date {
-  color: #a7a7a7 !important;
+  color: #666666 !important;
+  margin-bottom: 10px;
 }
 .condition {
   width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .unsent {
-  color: #FF4E02;
+  color: #ff4e02;
 }
 .sent {
-  color: #FFD600;
+  color: #ffd600;
 }
 .done {
-  color: #59BB77;
+  color: #59bb77;
 }
-.bold{
+.bold {
   font-weight: 900;
   font-family: "Poppins";
 }
 .font {
-  color: #666666;
+  color: #000000;
   font-family: "Poppins";
 }
 .font-white {
@@ -315,7 +426,7 @@ span {
 .input-container {
   display: flex;
   flex-direction: column;
-  
+
   position: relative;
 }
 .input-title {
@@ -324,7 +435,7 @@ span {
   top: 6.7px;
   font-size: 12px;
   font-family: "Poppins";
-  border-radius: 5px ;
+  border-radius: 5px;
   font-style: normal;
   font-weight: normal;
   line-height: 150%;
@@ -333,11 +444,11 @@ span {
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #B8B8B8;
+  color: #b8b8b8;
 }
 .bt-small-green {
   width: 95px;
-  background: #59BB77;
+  background: #59bb77;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
   border-radius: 20px;
 }
@@ -350,9 +461,9 @@ span {
   flex-direction: column;
 }
 .input-tile label {
-    -webkit-box-shadow: 5px 5px 10px #666;
-    -moz-box-shadow: 5px 5px 10px #666;
-    box-shadow: 5px 5px 10px #666;
+  -webkit-box-shadow: 5px 5px 10px #666;
+  -moz-box-shadow: 5px 5px 10px #666;
+  box-shadow: 5px 5px 10px #666;
 }
 .rectangle-title-select {
   width: 230px;
@@ -363,7 +474,6 @@ span {
   border-radius: 8px;
   padding: 0px 10px;
   margin-top: 12px;
-  
 }
 .rectangle-title {
   width: 363px;
