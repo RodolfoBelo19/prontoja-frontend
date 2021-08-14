@@ -8,101 +8,179 @@
     </div>
     <h3 class="text-h3">My Sales</h3>
     <h3 class="text-h4">Balance: R$ 250</h3>
-    <div class="test">
-      <div class="sale-details">
-        <div class="sale-details-content">
-          <span class="bold date">09/06</span>
-          <span class="font">Produtooooooooooooooo</span>
-        </div>
-        <div class="condition">
-          <span class="bold unsent">Being prepared</span>
-          <button class="bt"><v-icon>mdi-chevron-up</v-icon></button>
-        </div>
-      </div>
-      <div class="status">
-          <div class="status-details">
-            <div class="content-center-status">
-              <span class="bold font"
-                >Street, Number, Complement, Postal Code, City</span
-              >
-              <div class="input-container">
-                <label class="input-title">Delivery Status</label>
-                <div class="select-wrapper">
-                  <span><v-icon>mdi-chevron-down</v-icon></span>
-                  <select
-                    type="text"
-                    id="place-1"
-                    class="rectangle-title-select bold sent"
-                  >
-                    <option
-                      value="Preparando envio"
-                      selected
-                      class="bold sent"
-                      id="unsent"
-                    >
-                      On the way
-                    </option>
-                    <option
-                      value="Preparando envio"
-                      class="bold sent"
-                      id="sent"
-                    >
-                      a caminho
-                    </option>
-                    <option
-                      value="Preparando envio"
-                      class="bold done"
-                      id="done"
-                    >
-                      entregue
-                    </option>
-                  </select>
-                </div>
+
+    <div class="content">
+      <v-expansion-panels class="theme--light">
+        <v-expansion-panel>
+          <v-expansion-panel-header>
+            <div class="sale-details">
+              <div class="sale-details-content">
+                <span class="bold date">09/06</span>
+                <span class="font">Produtooooooooooooooo</span>
               </div>
-              <div class="input-container">
-                <label class="input-title">Delivery Note</label>
-                <div class="sale-desc-wrapper">
-                  <span class="sale-correct-wrapper"
-                    ><v-icon class="sale-correct">mdi-check</v-icon></span
-                  >
-                  <textarea
-                    type="text"
-                    id="place"
-                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
-                    class="rectangle-title"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="content-center-status-field">
-                <div class="status-content">
-                  <span class="bold font">Product Variant (2 units)</span>
-                  <button class="bt-small-green font-white">Editar</button>
-                </div>
-                <span class="font"
-                  >Order Number: <strong class="font">154585</strong></span
-                >
-                <br />
-                <span class="font"
-                  >Order value: <strong class="font">R$ total</strong></span
-                >
-                <span class="font"
-                  >Payment: <img src="../../assets/visa.png" alt="" /><strong
-                    class="font"
-                  >
-                    8546</strong
-                  ><span class="bold done"> confirmed</span></span
-                >
-                <br />
-                <span class="font"
-                  >Contato Cliente:
-                  <strong class="font" style="text-decoration: underline"
-                    >(dd) 12345-1234, cliente@gmail.com</strong
-                  ></span
-                >
+              <div class="condition">
+                <span class="bold unsent">Being prepared</span>
+                <!-- <button class="bt"><v-icon>mdi-chevron-up</v-icon></button> -->
               </div>
             </div>
-          </div>
-        </div>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <div class="status">
+              <div class="status-details">
+                <div class="content-center-status">
+                  <span class="bold font"
+                    >Street, Number, Complement, Postal Code, City</span
+                  >
+                  <div class="input-container">
+                    <label class="input-title">Delivery Status</label>
+                    <div class="select-wrapper">
+                      <span><v-icon>mdi-chevron-down</v-icon></span>
+                      <select
+                        type="text"
+                        id="place-1"
+                        class="rectangle-title-select bold unsent"
+                      >
+                        <option
+                          value="Preparando envio"
+                          selected
+                          class="bold unsent"
+                          id="unsent"
+                        >
+                          Being prepared
+                        </option>
+                        <option
+                          value="Preparando envio"
+                          class="bold sent"
+                          id="sent"
+                        >
+                          a caminho
+                        </option>
+                        <option
+                          value="Preparando envio"
+                          class="bold done"
+                          id="done"
+                        >
+                          entregue
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <label class="input-title">Delivery Note</label>
+                    <div class="sale-desc-wrapper">
+                      <span class="sale-correct-wrapper"
+                        ><v-icon class="sale-correct">mdi-check</v-icon></span
+                      >
+                      <textarea
+                        type="text"
+                        id="place"
+                        placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                        class="rectangle-title"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="content-center-status-field">
+                    <div class="status-content">
+                      <span class="bold font">Product Variant (2 units)</span>
+                      <!-- <button class="bt-small-green font-white">Editar</button> -->
+                    </div>
+                    <br />
+                    <div class="status-content">
+                      <span class="font">
+                      <strong class="font">Order Number: </strong>154585
+                      </span>
+                      <img src="../../assets/visa.png" style="width: 28px; height: 11px;" alt="" /> 
+                    </div>
+                    <div class="status-content">
+                      
+                    <span class="font-bold"
+                      >R$ total (2 units) </span>
+                    
+                       <span class="font">8546 ******* 233</span>  
+                    </div>
+                    <span class="bold done status-content">Order Confirmed</span>
+                    <br />
+                    <div class="status-content">
+                      <span class="font" style="text-decoration: underline; font-size: 12px;"
+                        ><strong class="font">Client Contact: </strong> (dd) 12345-1234, cliente@gmail.com</span
+                      >
+                    
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+      <v-expansion-panels>
+        <v-expansion-panel>
+          <v-expansion-panel-header>
+            <div class="sale-details">
+              <div class="sale-details-content">
+                <span class="bold date">09/06</span>
+                <span class="font">Produtooooooooooooooo</span>
+              </div>
+              <div class="condition">
+                <span class="bold sent">On the way</span>
+                <!-- <button class="bt"><v-icon>mdi-chevron-up</v-icon></button> -->
+              </div>
+            </div>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+      <v-expansion-panels>
+        <v-expansion-panel>
+          <v-expansion-panel-header>
+            <div class="sale-details">
+              <div class="sale-details-content">
+                <span class="bold date">09/06</span>
+                <span class="font">Produtooooooooooooooo</span>
+              </div>
+              <div class="condition">
+                <span class="bold done">Delivered</span>
+                <!-- <button class="bt"><v-icon>mdi-chevron-up</v-icon></button> -->
+              </div>
+            </div>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+      <v-expansion-panels>
+        <v-expansion-panel>
+          <v-expansion-panel-header>
+            <div class="sale-details">
+              <div class="sale-details-content">
+                <span class="bold date">09/06</span>
+                <span class="font">Produtooooooooooooooo</span>
+              </div>
+              <div class="condition">
+                <span class="bold done">Delivered</span>
+                <!-- <button class="bt"><v-icon>mdi-chevron-up</v-icon></button> -->
+              </div>
+            </div>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+      
     </div>
 
     <!-- <div class="sale-details">
@@ -220,16 +298,14 @@ export default {
   margin: 0 0 16px 10px;
 }
 .sale-details {
-  width: 90%;
+  width: 100%;
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
   text-align: center;
   padding: 5px;
-  background: #e9e9e9;
   border-radius: 6px;
   padding: 10px 0 0 0;
-  margin-bottom: 20px;
 }
 .sale-details-content {
   display: flex;
@@ -247,17 +323,16 @@ export default {
 }
 .sale-correct-wrapper {
   position: absolute;
-  left: 320px;
+  left: 285px;
   top: 45px;
 }
-.test {
+.content {
   width: 90%;
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
   text-align: center;
   padding: 5px;
-  background: #e9e9e9;
   border-radius: 6px;
   padding: 10px 0 10px 0;
   margin-bottom: 20px;
@@ -279,7 +354,7 @@ export default {
 .select-wrapper span {
   position: absolute;
   z-index: 10;
-  left: 190px;
+  left: 285px;
   top: 18px;
 }
 label {
@@ -295,7 +370,7 @@ label {
   opacity: 0.5;
 }
 .content-center-status {
-  padding: 0 25px;
+  padding: 0 15px;
   min-width: 240px;
 }
 .content-center-status-field {
@@ -343,6 +418,11 @@ label {
 }
 .font {
   color: #000000;
+  font-family: "Poppins";
+}
+.font-bold {
+  color: #666666;
+  font-weight: bold;
   font-family: "Poppins";
 }
 .font-white {
@@ -466,7 +546,7 @@ span {
   box-shadow: 5px 5px 10px #666;
 }
 .rectangle-title-select {
-  width: 230px;
+  width: 100%;
   height: 35px;
   background: #ffffff;
   border: 1px solid #d3d3d3;
@@ -476,7 +556,7 @@ span {
   margin-top: 12px;
 }
 .rectangle-title {
-  width: 363px;
+  width: 100%;
   height: 60px;
   background: #ffffff;
   border: 1px solid #d3d3d3;
@@ -497,5 +577,10 @@ span {
   /* identical to box height, or 22px */
   letter-spacing: -0.02em;
   color: #666666;
+}
+
+.v-expansion-panel {
+  background: #e9e9e9 !important;
+  margin-bottom: 25px;
 }
 </style>
