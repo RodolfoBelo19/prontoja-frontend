@@ -3,62 +3,55 @@
     <div class="product-container">
       <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3">Meus Produtos </h3>
-    <div class="my-product">
-      <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">0/100 (3 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-    </div>
-    <div class="my-product rectangle">
-      <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">20/85 (2 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-    </div>
-    <div class="my-product">
-      <div class="info-my-product">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">35/250 (1 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-    </div>
-    <div class="my-product rectangle">
-      <div class="info-my-product ">
-        <span>Produtooooooooooooooo</span>
-        <span class="bold">45/62 (1 variantes)</span>
-      </div>
-      <div class="icon-my-product">
-        <v-icon class="icon-pencil opacity">mdi-pencil</v-icon>
-        <v-icon>mdi-trash-can-outline</v-icon>
-      </div>
-      
-      
-    </div>
+    <h3 class="text-h3">My Products </h3>
     <div class="button-wrapper">
-        <button class="btn-white">
-          <v-icon class="vector">mdi-plus</v-icon>
-          <span>Agregar Novo Produto</span>
-        </button> 
-        <button class="btn-white">
-          <v-icon>mdi-plus</v-icon>
-          <span>Agregar Plano Recorrente</span>
-        </button> 
+      <router-link tag="button" class="btn-white" id="button" to="newproductorservice"><v-icon>mdi-plus</v-icon>Add New Product</router-link>
+      <router-link tag="button" class="btn-white" id="button" to="mysales"><v-icon>mdi-plus</v-icon>Add Recurring Plan</router-link>
     </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product">
+        <span>Productoooooooooooooooo</span>
+        <span class="bold">0/100 (3 variants)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product">
+        <span>Productoooooooooooooooo</span>
+        <span class="bold">0/100 (3 variants)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product">
+        <span>Productoooooooooooooooo</span>
+        <span class="bold">0/100 (3 variants)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    <div class="my-product rectangle">
+      <div class="info-my-product">
+        <span>Productoooooooooooooooo</span>
+        <span class="bold">0/100 (3 variants)</span>
+      </div>
+      <div class="icon-my-product">
+        <v-icon class="icon-pencil">mdi-pencil</v-icon>
+        <v-icon>mdi-trash-can-outline</v-icon>
+      </div>
+    </div>
+    
   </v-container>
   
 </template>
@@ -95,7 +88,7 @@ export default {
   letter-spacing: -0.02em;
   /* margin-left: 20px; */
   color: #303030;
-  margin: 0 0 30px 35px
+  margin: 0 0 10px 10px
 }
 .product-container {
   margin: 0 0 16px 10px;
@@ -122,37 +115,31 @@ export default {
   font-family: "Poppins";
 }
 .mdi-pencil {
-  color: #59bb77 !important;
+  color: #B8B8B8 !important;
 }
 .mdi-trash-can-outline {
-  color: #DADADA !important;
-}
-.opacity {
-  opacity: 0.55;
+  color: #B8B8B8 !important;
 }
 .mdi-plus {
   color: #59BB77 !important;
-  width: 40px;
+  margin-right: 10px;
   font-size: 15px !important;
 }
 .my-product i:before {
   font-size: 28px;
 }
 .button-wrapper {
-  margin-top: 40px;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 .btn-white {
-  margin-left: 180px;
-  margin-top: 10px;
   padding: 10px;
-  width: 239.5px;
-  height: 43.72px;
+  width: 180px;
+  height: 32.72px;
   border: 1px solid #59BB77;
   box-sizing: border-box;
   border-radius: 40px;
@@ -168,6 +155,7 @@ export default {
   text-align: center;
   letter-spacing: -0.02em;
   color: #59BB77;
+  justify-content: center;
 }
 .icon-plus {
   width: 19px;
@@ -263,7 +251,9 @@ export default {
   z-index: 50;
 }
 .rectangle {
-  background: #E8F5EC;
+  background: #F3F3F3;
+  margin: 30px 0 20px 0;
+  border-radius: 10px;
 }
 .icon-my-product {
   display: flex;

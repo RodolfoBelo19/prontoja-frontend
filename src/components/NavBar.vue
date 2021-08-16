@@ -52,6 +52,7 @@ export default {
 
 .v-list-item {
   flex-direction: column;
+  width: 100% !important;
 }
 
 .v-list-item a {

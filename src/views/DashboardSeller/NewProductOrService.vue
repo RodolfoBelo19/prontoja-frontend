@@ -1,40 +1,39 @@
 <template>
   <v-container class="vertical-center">
     <div class="product-container">
-      <router-link to="/" class="back"> 
+      <router-link to="myproducts" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3">Novo Produto ou Serviço</h3>
+    <h3 class="text-h3">New Product or Service</h3>
     <span class="bold" style="margin-left: 20px"
-      >Informação do producto/serviço</span
+      >Details</span
     >
     <div class="info-product">
       <div class="input-container">
-        <label class="input-title">Título</label>
+        <label class="input-title">Title</label>
         <input
           type="text"
           id="place"
-          placeholder="Titulo do produto/serviço"
+          placeholder="Product/Service Title"
           class="rectangle-title"
         />
       </div>
       <div class="input-container">
-        <label class="input-title">Descrição</label>
+        <label class="input-title">Description</label>
         <textarea
           name="desc"
           id="place"
           class="rectangle-desc"
-          placeholder="Descrição do produto, tente ser o mais especifico e claro possivel"
+          placeholder="Product description, try to be as specific and clear as possible."
           cols="30"
           rows="10"
         ></textarea>
       </div>
-      <span class="bold" style="margin-left: 20px">Fotos (até 10 fotos)</span>
+      <span class="bold" style="margin-left: 20px">Photos (up to  10 photos)</span>
       <p>
-        Quanto mais detalhes consigua mostrar ajuda no momento de converter a
-        venda
+        The more details you can show help when converting the sale.
       </p>
       <div class="photo">
         <img style="width: 35%" src="../../assets/shoes.png" alt="" />
@@ -46,19 +45,19 @@
       <div class="options-container">
         <div class="option">
           <div class="option-title">
-            <span style="margin-top: 20px">Vai cobrar envio do produto?</span>
+            <span style="margin-top: 20px">Will you charge for shipping the product? </span>
           </div>
           <div class="choices-container">
             <span></span>
             <div class="option-choices">
               <input id="delivery-yes" class="option-input" type="radio" />
-              <label for="delivery-yes">SIM</label>
+              <label for="delivery-yes">YES</label>
               <input id="delivery-no" class="option-input" type="radio" />
-              <label for="delivery-no">NÃO</label>
+              <label for="delivery-no">NO</label>
             </div>
           </div>
         </div>
-        <div class="option">
+        <!-- <div class="option">
           <div class="option-title">
             <span>Este produto/serviço tem variantes?</span>
           </div>
@@ -71,22 +70,22 @@
               <label for="services-no">NÃO</label>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="buttons-container">
-        <button class="green-button">configure a opção de envio</button>
+        <button class="green-button">Configure the shipping option</button>
         <button class="white-button">
           <v-icon class="button-plus">mdi-plus</v-icon
-          ><span> adicionar variante</span>
+          ><span> Add Variant</span>
         </button>
       </div>
       <div class="my-product">
         <div class="info-my-product">
           <div class="firstspans">
             <span style="margin-right: 40px">#1</span>
-            <span class="bold">0/100(vendidos/total)</span>
+            <span class="bold">0/100 (sold/total)</span>
           </div>
-          <span>Color / Tamanho / Outro</span>
+          <span>Colour / Size / Other</span>
           <span>R$ 155,00</span>
         </div>
         <div class="icon-container" style="display: block">
@@ -101,9 +100,9 @@
         <div class="info-my-product">
           <div class="firstspans">
             <span style="margin-right: 40px">#2</span>
-            <span class="bold">0/100(vendidos/total)</span>
+            <span class="bold">0/100 (sold/total)</span>
           </div>
-          <span>Color / Tamanho / Outro</span>
+          <span>Colour / Size / Other</span>
           <span>R$ 155,50</span>
         </div>
         <div class="icon-container" style="display: block">
@@ -116,8 +115,8 @@
        
       </div>
       <div class="final-buttons">
-        <button class="btn-white">Salvar</button>
-        <button class="btn-green">Gerar Botão/Link</button>
+        <button class="btn-white">Save</button>
+        <button class="btn-green">Create Button/Link</button>
       </div>
     </div>
   </v-container>
@@ -241,11 +240,11 @@ p {
 .btn-white {
   margin: 50px 0 20px 0;
   padding: 10px;
-  width: 243.5px;
+  width: 100%;
   height: 47.72px;
   border: 1px solid #59bb77;
   box-sizing: border-box;
-  border-radius: 40px;
+  border-radius: 10px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -257,10 +256,10 @@ p {
 }
 .btn-green {
   padding: 10px;
-  width: 243.5px;
+  width: 100%;
   height: 47.72px;
   box-sizing: border-box;
-  border-radius: 40px;
+  border-radius: 10px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -300,7 +299,9 @@ input {
 .choices-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 80px 0;
 }
 .option-choices {
   justify-self: flex-end;
@@ -318,26 +319,29 @@ input {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  height: 106px;
+  height: auto;
   justify-content: space-between;
 }
 .green-button {
   font-family: "Poppins";
   color: white;
   padding: 3px;
+  height: 44px;
   background: #59bb77;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
 }
 
 .white-button {
   font-family: "Poppins";
   color: #59bb77;
   padding: 3px;
+  height: 44px;
   background: white;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
   border: 1px solid #59bb77;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .white-button i:before {
   width: 16px;
