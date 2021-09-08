@@ -87,6 +87,14 @@ const routes = [
     }
   },
   {
+    path: '/registercard',
+    name: 'registercard',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardBuyer/RegisterCard.vue')
+    }
+  },
+  {
     path: '/mysales',
     name: 'mysales',
     components: {
