@@ -12,7 +12,7 @@
 
       <v-card-actions class="justify-space-between">
         <v-btn text @click="prev">
-          <v-icon>mdi-chevron-left</v-icon>
+          <!-- <v-icon>mdi-chevron-left</v-icon> -->
         </v-btn>
         <v-item-group v-model="onboarding" class="text-center" mandatory>
           <v-item
@@ -26,21 +26,48 @@
           </v-item>
         </v-item-group>
         <v-btn text @click="next">
-          <v-icon>mdi-chevron-right</v-icon>
+          <!-- <v-icon>mdi-chevron-right</v-icon> -->
         </v-btn>
       </v-card-actions>
     </v-card>
 
     <br />
-    <v-select :items="items" outlined class="my-input"></v-select>
+    <v-select :items="items" outlined class="my-input test"></v-select>
+
+    <v-row class="row-qtd">
+      <span style="color: #B8B8B8; font-family: 'baloo 2">Quantity</span>
+      <div class="qtd">
+        <a class="btn-qdt" style="margin-left: 40px; border-radius: 6px;">-</a>
+        <span style="padding: 0 20px; color: #B8B8B8;">1</span>
+        <a class="btn-qdt" >+</a>
+      </div>
+    </v-row>
+
+    <div class="border-variant"></div>
+  
+    <div class="uni-qdt">
+      <div class="uni-qdt-content">
+        <span class="font-gray">Units x Variant</span>
+        <span class="font-gray"><strong>Total</strong></span>
+      </div>
+      <div class="uni-qdt-content">
+        <span class="font-gray">2 x R$ 50,00</span>
+        <span class="font-green"><strong>R$ 100,00</strong></span>
+      </div>
+    </div>
+
+    <v-btn class="btn-pr">
+      Comprar<span class="eclipse"><span class="eclipse-name"> Já</span></span>
+    </v-btn>
+
   </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
-    items: ["Variantes", "Variantes", "Variantes"],
-    length: 3,
+    items: ["Blue", "Variants", "Variants"],
+    length: 5,
     onboarding: 0,
   }),
 };
@@ -57,6 +84,97 @@ export default {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); */
   margin-top: 10%;
+}
+
+/* filter: hue-rotate(280deg); */
+
+.v-text-field fieldset, .v-text-field .v-input__control, .v-text-field .v-input__slot {
+  border-radius: 5px !important;
+}
+
+.font-gray {
+  color: #BEBEBE;
+  font-family: 'Baloo 2';
+}
+
+.eclipse {
+  width: 23px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  margin-left: 3px;
+  padding: 0 15px 0 0;
+}
+
+.eclipse-name {
+  color: #59BB77;
+  text-align: center;
+}
+
+.font-green {
+  color:#59BB77;
+  font-family: 'Baloo 2';
+}
+/* 
+.v-btn__content {
+  color: #d5d5d5;
+} */
+
+.btn-qdt {
+  width: 48px;
+  height: 45px;
+  background: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.uni-qdt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.uni-qdt-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-application a {
+  line-height: 1.4;
+  text-align: center;
+  color: #666666;
+  font-size: 30px;
+}
+
+.border-variant {
+  width: 373px;
+  height: 0px;
+  border: 1px solid #DBDBDB;
+  margin-inline: inherit;
+  margin-top: 90px;
+}
+
+.v-text-field {
+  /* border: 0.5px solid #666666 !important; */
+}
+
+fieldset {
+  border: 2px solid #c5c5c5 !important;
+}
+
+.qtd {
+  display: flex;
+  align-items: center;
+}
+
+.row-qtd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quadrado {
@@ -142,21 +260,20 @@ export default {
 .btn-pr {
   width: 85%;
   height: 55px !important;
-  margin-left: 5%;
+  margin-left: 8%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 5%;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
-
   text-align: center;
   letter-spacing: -0.02em;
   text-transform: capitalize;
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 }
 .my-input.v-input .v-input__slot {
   border-radius: 8px;
