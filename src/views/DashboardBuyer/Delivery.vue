@@ -3,27 +3,34 @@
     <div class="product-container">
       <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3">Entrega</h3>
+    <h3 class="text-h3">Delivery</h3>
     <v-row>
       <v-col cols="12" sm="6" md="4">
-        <v-text-field label="CEP" outlined class="my-input"></v-text-field>
-        <br />
+        <v-text-field label="Postal Code" placeholder="01234-010" outlined class="my-input"></v-text-field>
+        <p class="p-info">
+          City: São Paulo <br>
+          Neigborhood: Santa Cecilia <br>
+          Street: Rua Baronesa de Itu <br>
+          <br>  
+        </p> 
         <v-text-field
-          label="Número de Porta"
+          label="Door Number"
           outlined
           class="my-input"
+          placeholder="Door Number"
         ></v-text-field>
         <v-text-field
-          label="Complemento"
+          label="Complement (opcional)"
           outlined
           class="my-input"
+          placeholder="Complement / Reference"
         ></v-text-field>
       </v-col>
     </v-row>
-    <v-btn elevation="2" class="btn-pr">Adicionar Endereço</v-btn>
+    <v-btn elevation="2" class="btn-pr">save address</v-btn>
     <br>
   </v-container>
 </template>
@@ -58,11 +65,14 @@ export default {
   font-size: 24px;
   line-height: 90%;
   letter-spacing: -0.02em;
-  /* margin-left: 20px; */
+  margin-bottom: 17px;
   color: #303030;
 }
 .product-container {
   margin: 0 0 16px 10px;
+}
+.p-info {
+  color: #C4C4C4; 
 }
 .back {
   font-family: Poppins;
@@ -104,17 +114,16 @@ export default {
 .btn-pr {
   width: 85%;
   height: 55px !important;
-  margin-left: 5%;
+  margin-left: 7%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
-  margin-top: 5%;
+  border-radius: 8px;
+  margin-top: 50%;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
-
   text-align: center;
   letter-spacing: -0.02em;
   text-transform: capitalize;

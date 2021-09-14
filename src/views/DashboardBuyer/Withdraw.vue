@@ -3,34 +3,40 @@
     <div class="product-container">
       <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3" style="margin-top: 10%">Sacar Saldo</h3>
+    <h3 class="text-h3" style="margin-top: 5%">Withdraw Balance</h3>
     <div class="vertical-center">
       <div class="bank">
-        <h3 class="bank-title">Nome Completo do Titular da Conta</h3>
-        <h3 class="bank-subtitle">CNPJ/CPF: 123.456.789-12</h3>
-        <h3 class="bank-title">Banco algumacoisa (cod. banco)</h3>
-        <h3 class="bank-subtitle">Agencia: 2544</h3>
-        <h3 class="bank-subtitle">Conta Corrente: 45848-4</h3>
+        <h3 class="bank-title">Full Name</h3>
+        <h3 class="bank-subtitle">Tax ID:  123.456.789-12</h3>
+        <h3 class="bank-title">Bank Name (bank number code)</h3>
+        <h3 class="bank-subtitle">Agency: 2544</h3>
+        <h3 class="bank-subtitle">Checking Account number: 45848-4</h3>
       </div>
       <br /><br />
       <v-text-field
-        label="Saldo a Sacar"
+        label="Balance to Withdraw"
         outlined
         class="my-input saldo"
+        placeholder="R$ 150,00"
       ></v-text-field>
-
+      <span class="balance-info">
+        <span class="balance-info-title">Available Balance <strong>R$ 200,00</strong></span> <br>
+        <ul>
+          <li>from reimbursements: R$ 45,00 </li>
+          <li>from sales: R$ 155,00 </li>
+        </ul>
+        <p class="balance-info-sub">
+          You are awaiting confirmation on the delivery of sales in the amount of: <strong>R$ 250,00</strong> 
+        </p>
+      </span>
      <v-row>
-        <v-col cols="5" sm="5" md="5"> 
-            <v-btn elevation="2" class="btn-pr2">Cancelar</v-btn>
+        <v-col > 
+            <v-btn elevation="2" class="btn-pr">confirm</v-btn>
+            <v-btn elevation="2" class="btn-pr2">cancel</v-btn>
         </v-col>
-        <v-col cols="2" sm="2" md="2"> </v-col>
-        <v-col cols="5" sm="5" md="5"> 
-            <v-btn elevation="2" class="btn-pr">Sacar</v-btn>
-        </v-col>
-
       </v-row>
     </div>
      
@@ -54,13 +60,29 @@ export default {
   margin: 0;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 65%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-top: 10%;
 }
 .product-container {
   margin: 0 0 16px 10px;
+}
+.balance-info {
+  color: #59bb77;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.balance-info ul {
+  padding: 0 35px;
+}
+.balance-info-title {
+  font-size: 17px;
+}
+.balance-info-sub {
+  margin-top: 25px;
+  color: #B8B8B8;
+  padding: 0 8px;
 }
 .back {
   font-family: Poppins;
@@ -95,7 +117,8 @@ export default {
   padding: 10px;
   width: 300px;
   height: 113px;
-  background: #d4eddc;
+  background: #F3F3F3;
+  border-radius: 5px;
 }
 .text-h3 {
   font-family: "Baloo 2";
@@ -136,10 +159,9 @@ export default {
 .btn-pr {
   width: 100%;
   height: 40px !important;
-  margin-left: 5%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 8px;
   margin-top: 5%;
   font-family: "Poppins";
   font-style: normal;
@@ -155,10 +177,9 @@ export default {
 .btn-pr2 {
   width: 100%;
   height: 40px !important;
-  margin-left: 5%;
   background: #B8B8B8 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 8px;
   margin-top: 5%;
   font-family: "Poppins";
   font-style: normal;
