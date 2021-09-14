@@ -60,7 +60,7 @@ export default {
   margin: 0;
   position: absolute;
   left: 50%;
-  top: 65%;
+  top: 40%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-top: 10%;
