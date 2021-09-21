@@ -79,6 +79,22 @@ const routes = [
     }
   },
   {
+    path: '/deliveryBuyerAddresses',
+    name: 'deliveryBuyer',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardBuyer/DeliveryAddresses.vue')
+    }
+  },
+  {
+    path: '/creditCards',
+    name: 'creditCards',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardBuyer/CreditCards.vue')
+    }
+  },
+  {
     path: '/withdraw',
     name: 'withdraw',
     components: {
