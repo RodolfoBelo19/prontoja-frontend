@@ -103,6 +103,14 @@ const routes = [
     }
   },
   {
+    path: '/withdrawConfirm',
+    name: 'withdrawConfirm',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardBuyer/WithdrawConfirm.vue')
+    }
+  },
+  {
     path: '/registercard',
     name: 'registercard',
     components: {

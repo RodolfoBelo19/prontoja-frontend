@@ -6,9 +6,9 @@
         Back
       </router-link>
     </div>
-    <h3 class="text-h3" style="margin-top: 5%; margin-left: 6%;">Withdraw Balance</h3>
+    
     <div class="vertical-center">
-      <div class="bank" style="margin-top: 50px">
+      <div class="bank">
         <h3 class="bank-title">Full Name</h3>
         <h3 class="bank-subtitle">Tax ID:  123.456.789-12</h3>
         <h3 class="bank-title">Bank Name (bank number code)</h3>
@@ -16,28 +16,14 @@
         <h3 class="bank-subtitle">Checking Account number: 45848-4</h3>
       </div>
       <br /><br />
-      <v-text-field
-        label="Balance to Withdraw"
-        outlined
-        class="my-input saldo"
-        placeholder="R$ 150,00"
-      ></v-text-field>
+      
       <div class="balance-info">
-        <span class="balance-info-title">Available Balance <strong>R$ 200,00</strong></span> <br>
-        <ul>
-          <li>from reimbursements: R$ 45,00 </li>
-          <li>from sales: R$ 155,00 </li>
-        </ul>
+        <span class="balance-info-title"><strong>Withdrawal confirmed</strong></span> <br>
+        <span class="balance-info-title">R$ 150,00</span> <br>
         <p class="balance-info-sub">
-          You are awaiting confirmation on the delivery of sales in the amount of: <strong>R$ 250,00</strong> 
+          Transfer processed, please wait xxx days for it to be available on your account. 
         </p>
       </div>
-     <v-row>
-        <v-col > 
-            <v-btn elevation="2" class="btn-pr">confirm</v-btn>
-            <v-btn elevation="2" class="btn-pr2">cancel</v-btn>
-        </v-col>
-      </v-row>
     </div>
      
   </v-container>
@@ -72,8 +58,9 @@ export default {
 .balance-info {
   color: #59bb77;
   margin: 0 auto;
-  padding: 0 60px;
-  font-family: "Poppins"
+  padding: 0 20px;
+  font-family: "Poppins";
+  text-align: center;
 }
 .balance-info ul {
   padding: 0 35px;
@@ -82,7 +69,8 @@ export default {
   font-size: 14px
 }
 .balance-info-title {
-  font-size: 15px;
+  font-size: 25px;
+  text-align: center;
 }
 .balance-info-sub {
   margin-top: 25px;

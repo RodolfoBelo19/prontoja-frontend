@@ -9,6 +9,7 @@
     <h3 class="text-h3">Perfil</h3>
     <v-row>
       <v-col cols="12" sm="12" md="12">
+        <input v-validate="'email'" data-vv-as="email" name="email_field" type="text">
         <v-text-field label="Nome" outlined class="my-input"></v-text-field>
         <v-text-field label="Email" outlined class="my-input"></v-text-field>
       </v-col>
@@ -74,6 +75,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {};
