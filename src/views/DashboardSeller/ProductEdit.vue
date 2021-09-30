@@ -3,23 +3,23 @@
     <div class="product-container">
       <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
-    <h3 class="text-h3">Meus Produtos </h3>
+    <h3 class="text-h3">My Products </h3>
     <div class="my-product">
       <div class="info-my-product">
         <div class="info-my-product-content">
-            <span class="font-red">Produtooooooooooooooo</span>
+            <span class="font-red">Productooooooooooooooo</span>
             <span class="bold">R$150,69 0/100</span>
         </div>
         <div class="center-edit">
-            <p>Confirma que quer apagar este produto?</p>
+            <p>Do you want to delete this product?</p>
             <br>
-            <p>Fazendo isso o link e botão de compra ficará inativo.</p>
+            <p>By doing this the link and purchase button will be inactive.</p>
             <div class="button-align">
-                <button class="btn-cancel">Cancelar</button>
-                <button class="btn-confirm">Confirmar</button>
+                <button class="btn-confirm">Confirm</button>
+                <button class="btn-cancel">Cancel</button>
             </div>
         </div>
       </div>
@@ -175,12 +175,12 @@ export default {
   background-color: #e9e9e9;
   padding: 10px;
 }
-.btn-cancel {
-  width: 122.43px;
-  height: 86.7px !important;
+.btn-confirm {
+  width: 100%;
+  height: 55px !important;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -192,12 +192,13 @@ export default {
   text-transform: capitalize;
   color: #ffffff !important;
 }
-.btn-confirm {
-  width: 122.43px;
-  height: 86.7px !important;
+.btn-cancel {
+  margin-top: 20px;
+  width: 100%;
+  height: 55px !important;
   background: #B8B8B8 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -255,9 +256,10 @@ export default {
 }
 .button-align {
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: space-between;
-    width: 82%;
+    width: 100%;
     margin-inline: auto;
     margin-top: 150px;
 }

@@ -3,15 +3,16 @@
     <div class="product-container">
       <router-link to="/" class="back"> 
         <v-icon>mdi-chevron-left</v-icon>
-        Voltar
+        Back
       </router-link>
     </div>
     <div class="info-prod-notfound">
-      <h2 class="gray-title">ups... este produto não existe mais</h2>
-      <h2 class="green-title">pode contatar a loja <br> para mais informações</h2>
+      <h2 class="gray-title">ups... this products is <br> not available anymore</h2>
+      <h2 class="green-title">you can contact the <br> store for more <br> information</h2>
       <div class="store-info">
-        <a href="#">telefone loja</a>
-        <a href="#">email loja</a>
+        <a href="#">store telephone number</a>
+        <br>
+        <a href="#">store e-mail</a>
       </div>
     </div>
   </v-container>
