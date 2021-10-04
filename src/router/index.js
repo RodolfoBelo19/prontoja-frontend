@@ -135,6 +135,14 @@ const routes = [
     }
   },
   {
+    path: '/deliveryCost',
+    name: 'deliveryCost',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/DeliveryCost.vue')
+    }
+  },
+  {
     path: '/myproducts',
     name: 'myproducts',
     components: {
