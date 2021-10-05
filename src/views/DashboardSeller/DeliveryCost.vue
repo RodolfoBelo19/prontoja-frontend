@@ -6,7 +6,7 @@
         Back
       </router-link>
     </div>
-    <span class="bold" style="margin-left: 20px">Delivery Cost</span>
+    <span class="bold" style="margin-left: 20px;">Delivery Cost</span>
     <p>You must <strong>include</strong> a fixed cost of delivery <br> 
     which will be included in the price of the <br> 
      product at the store.
@@ -17,29 +17,49 @@
     </p>
     <v-row class="row-center">
       <v-col cols="4" sm="4" md="4">
-        <v-text-field label="Nome" outlined class="my-input"></v-text-field>
+        <v-text-field label="Length (cm)" outlined class="my-input"></v-text-field>
       </v-col>
       <v-col cols="4" sm="4" md="4">
-        <v-text-field label="Nome" outlined class="my-input"></v-text-field>
+        <v-text-field label="Height (cm)" outlined class="my-input"></v-text-field>
       </v-col>
       <v-col cols="4" sm="4" md="4">
-        <v-text-field label="Nome" outlined class="my-input"></v-text-field>
+        <v-text-field label="Width (cm)" outlined class="my-input"></v-text-field>
       </v-col>
       <v-col cols="4" sm="4" md="4">
-        <v-text-field label="Nome" outlined class="my-input"></v-text-field>
+        <v-text-field label="Weight (kg)" outlined class="my-input"></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="12" md="12">
+        <v-text-field label="Postal Code of dispatch" outlined class="my-input"></v-text-field>
       </v-col>
     </v-row>
     
 
     <div class="info-product">
-      
-      
-      
-      <div class="final-buttons">
+      <div class="final-buttons-one">
         <button class="btn-white">Estimate delivery cost</button>
+      </div>
+      <v-row class="gray">
+        <v-col cols="5" sm="5" md="5">
+          <strong>Distance from dispatch point</strong><br><br>
+          <span>5 km</span><br>
+          <span>10 km</span><br>
+          <span>15 km</span><br>
+        </v-col>
+        <v-col cols="5" sm="5" md="5">
+          <strong>Estimated Delivery cost</strong><br><br>
+          <span>R$ 15</span><br>
+          <span>R$ 20</span><br>
+          <span>R$ 55</span><br>
+        </v-col>
+      </v-row>
+      <v-col cols="12" sm="12" md="12">
+        <v-text-field label="Fix delivery cost to be charged" outlined class="my-input"></v-text-field>
+      </v-col>
+      <div class="final-buttons-two">
         <button class="btn-green">Confirm delivery cost</button>
       </div>
     </div>
+    <p>* We use the Correios' SEDEX calculator, we provide here an estimate, which may change without prior notice.</p>
   </v-container>
 </template>
 
@@ -68,16 +88,28 @@ export default {
 .info-my-product {
   font-family: "Poppins";
 }
+.col-4 {
+  padding: 0 12px !important;
+}
+.gray {
+  background: #F3F3F3;
+  width: 100%;
+  height: 180px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
 p {
   width: 300px;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #666666;
   margin-left: 20px;
+  margin-top: 20px;
 }
 .row-center {
   margin: 0 auto;
@@ -288,7 +320,15 @@ input {
 .mdi-trash-can-outline {
   color: #dadada !important;
 }
-.final-buttons {
+.final-buttons-one {
+  margin-top: -40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.final-buttons-two {
   width: 100%;
   display: flex;
   flex-direction: column;
