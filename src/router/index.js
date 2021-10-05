@@ -135,6 +135,22 @@ const routes = [
     }
   },
   {
+    path: '/photoseller',
+    name: 'photoseller',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/PhotoSeller.vue')
+    }
+  },
+  {
+    path: '/variantregister',
+    name: 'variantregister',
+    components: {
+      NavBar,
+      default: () => import('../views/DashboardSeller/VariantRegister.vue')
+    }
+  },
+  {
     path: '/deliveryCost',
     name: 'deliveryCost',
     components: {
