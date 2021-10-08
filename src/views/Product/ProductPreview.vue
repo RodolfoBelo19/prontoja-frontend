@@ -1,12 +1,18 @@
 <template>
   <v-container class="vertical-center">
-    <h3 class="text-h3-quadrado">Tênis Nike Venture Runner Masculino</h3>
-    <p class="text-p">3500 vendas realizadas pela loja</p>
+    <div class="product-container">
+      <router-link to="/" class="back"> 
+        <v-icon>mdi-chevron-left</v-icon>
+        Voltar
+      </router-link>
+    </div>
+    <h3 class="text-h3-quadrado">Escultura Wire</h3>
+    <p class="text-p">500 sales done by Pomeriggio Store</p>
     <br /><br />
     <v-card flat tile style="background: transparent">
       <v-window v-model="onboarding" reverse>
         <v-window-item v-for="n in length" :key="`card-${n}`">
-          <img src="../../assets/tenis.png" width="100%" style="margin-top: -20px" />
+          <img src="../../assets/ScreenShot.png" width="100%" style="margin-top: -20px" />
         </v-window-item>
       </v-window>
 
@@ -35,11 +41,12 @@
     <v-select :items="items" outlined class="my-input test"></v-select>
 
     <v-row class="row-qtd">
-      <span style="color: #B8B8B8; font-family: 'baloo 2">Quantity</span>
+      <!-- <span style="color: #B8B8B8; font-family: 'baloo 2">Quantity</span> -->
+      <span style="margin-left: 5%; margin-bottom: 20px">Selecione a quantidade</span>
       <div class="qtd">
-        <a class="btn-qdt" style="margin-left: 40px; border-radius: 6px;">-</a>
-        <span style="padding: 0 20px; color: #B8B8B8;">1</span>
-        <a class="btn-qdt" >+</a>
+        <a @click.prevent="incrementCounter" class="btn-qdt" style="margin-left: 40px; border-radius: 6px;">-</a>
+        <span style="padding: 0 20px; color: #B8B8B8;">{{ count }}</span>
+        <a @click.prevent="decrementCounter" class="btn-qdt" >+</a>
       </div>
     </v-row>
 
@@ -47,17 +54,17 @@
   
     <div class="uni-qdt">
       <div class="uni-qdt-content">
-        <span class="font-gray">Units x Variant</span>
+        <span class="font-gray">Escultura wire</span>
         <span class="font-gray"><strong>Total</strong></span>
       </div>
       <div class="uni-qdt-content">
-        <span class="font-gray">2 x R$ 50,00</span>
-        <span class="font-green"><strong>R$ 100,00</strong></span>
+        <span class="font-gray">1x R$ 50,00</span>
+        <span class="font-green"><strong>R$ 50,00</strong></span>
       </div>
     </div>
 
     <v-btn class="btn-pr">
-      Comprar<span class="eclipse"><span class="eclipse-name"> Já</span></span>
+      Confirmar Escolha
     </v-btn>
 
   </v-container>
@@ -66,10 +73,19 @@
 <script>
 export default {
   data: () => ({
-    items: ["Blue", "Variants", "Variants"],
+    items: ["Azul", "Variants", "Variants"],
     length: 5,
     onboarding: 0,
+    count: 0,
   }),
+  methods: {
+    decrementCounter: function() {
+      this.count += 1;
+    },
+    incrementCounter: function() {
+      this.count -= 1;
+    }
+  }
 };
 </script>
 
@@ -83,9 +99,35 @@ export default {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); */
-  margin-top: 10%;
+  margin-top: 8%;
+}
+.product-container {
+  margin: 0 0 16px 10px;
+}
+.v-application a {
+  font-size: 18px !important;
+  line-height: 2.4 !important;
 }
 
+.v-application p {
+  margin-bottom: 1px;
+}
+
+.back {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #C1C1C1 !important;
+  text-decoration: none;
+  margin: 0 0 20px -10px;
+}
+
+.theme--light.v-sheet {
+  height: 100%;
+}
 /* filter: hue-rotate(280deg); */
 
 .v-text-field fieldset, .v-text-field .v-input__control, .v-text-field .v-input__slot {
@@ -97,7 +139,10 @@ export default {
   font-family: 'Baloo 2';
 }
 
-.eclipse {
+/*** Símbolo do já em borda 
+**
+*
+ .eclipse {
   width: 23px;
   background: #FFFFFF;
   border-radius: 100px;
@@ -108,7 +153,10 @@ export default {
 .eclipse-name {
   color: #59BB77;
   text-align: center;
-}
+} 
+*
+**
+***/
 
 .font-green {
   color:#59BB77;
@@ -173,8 +221,8 @@ fieldset {
 
 .row-qtd {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;  
 }
 
 .quadrado {
