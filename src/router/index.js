@@ -55,6 +55,14 @@ const routes = [
     }
   },
   {
+    path: '/productSummary',
+    name: 'productSummary',
+    components: {
+      NavBar,
+      default: () => import(/* webpackChunkName: "about" */ '../views/Product/ProductSummary.vue')
+    }
+  },
+  {
     path: '/payerror',
     name: 'payerror',
     components: {
