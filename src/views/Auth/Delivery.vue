@@ -1,17 +1,20 @@
 <template>
   <v-container class="vertical-center">
     <h3 class="text-h3">Entrega</h3>
-    <p class="text-p">Necesitamos algums detalhes pra entrega.</p>
+    <p class="text-p">Precisamos de algums detalhes para entrega.</p>
     <v-row>
       <v-col cols="12" sm="6" md="4">
         <v-text-field label="Nome" outlined class="my-input"></v-text-field>
         <v-text-field label="Celular" outlined class="my-input"></v-text-field>
+        <v-text-field label="Cóodigo Postal" outlined class="my-input"></v-text-field>
       </v-col>
     </v-row>
-    <p class="text-p2">Onde quer receber sua compra?</p>
+    <p class="text-p2">
+      Cidade: São Paulo <br>
+      Bairro: Santa Cecilia <br>
+      Rua: Rua Baronesa de Itu</p>
     <v-row>
       <v-col cols="12" sm="6" md="4">
-        <v-text-field label="CEP" outlined class="my-input"></v-text-field>
         <br />
         <v-text-field
           label="Número de Porta"
@@ -19,7 +22,7 @@
           class="my-input"
         ></v-text-field>
         <v-text-field
-          label="Complemento"
+          label="Complemento (opcional)"
           outlined
           class="my-input"
         ></v-text-field>
@@ -28,7 +31,8 @@
     <v-btn elevation="2" class="btn-pr">Ir para pagamento</v-btn>
     <br>
     <p class="p-end">
-      Mais para frente  se quiser pode modificar o endereço.
+      <br>
+      Mais tarde, se desejar, você pode alterar o endereço.
     </p>
   </v-container>
 </template>
@@ -69,7 +73,7 @@ export default {
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 150%;
   /* identical to box height, or 21px */
   /* margin-left: 20px; */
@@ -79,7 +83,7 @@ export default {
 }
 .text-p2 {
   font-family: "Poppins";
-  text-align: center;
+  text-align: left;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -97,7 +101,7 @@ export default {
   margin-left: 5%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-top: 5%;
   font-family: "Poppins";
   font-style: normal;
@@ -117,7 +121,7 @@ export default {
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 150%;
   /* or 15px */
 

@@ -4,10 +4,15 @@
     <img src="../../assets/paysuccess.png" style="margin-left: 12%" />
     <br /><br />
     <h3 class="text-h3">Já está Pronto</h3>
-    <p class="text-p">Parabéns, a sua compra foi feita corretamente via</p>
+    <p class="text-h4">Parabéns, a sua compra foi feita corretamente via</p>
 
-    <v-btn elevation="2" class="btn-pr2">Volver a loja</v-btn>
-    <v-btn elevation="2" class="btn-pr">Ir a Pronto Já</v-btn>
+    <hr>
+    <br>
+    <p class="text-p">Vai receber um email confirmando sua <br> compra e pagamento.</p>
+    <p class="text-p">Pode conferir suas compras no <br> <span class="link">ProntoJá.com</span></p>
+
+    <v-btn elevation="2" class="btn-pr2">Continuar Comprando</v-btn>
+    <v-btn elevation="2" class="btn-pr">Ir para Pronto Já</v-btn>
   </v-container>
 </template>
 
@@ -29,7 +34,9 @@ export default {
   transform: translate(-50%, -50%); */
   margin-top: 10%;
 }
-
+.link {
+  color:  #59BB77 !important;
+}
 .quadrado {
   margin-top: 40px;
   width: 100%;
@@ -68,12 +75,21 @@ export default {
   font-style: normal;
   font-weight: bold;
   font-size: 42px;
-  margin-left: 20px;
   line-height: 110%;
+  text-align: center;
   /* or 46px */
-
   letter-spacing: -0.02em;
-
+  color: #59bb77;
+}
+.text-h4 {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 110%;
+  text-align: center;
+  /* or 46px */
+  letter-spacing: -0.02em;
   color: #59bb77;
 }
 .text-h3-quadrado {
@@ -90,11 +106,11 @@ export default {
 .text-p {
   font-family: Poppins;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 14px;
   line-height: 150%;
   /* or 21px */
-
+  text-align: center;
   letter-spacing: -0.02em;
   margin-left: 20px;
   color: #303030;
@@ -112,14 +128,18 @@ export default {
 
   color: #666666;
 }
-
+hr {
+  width: 86%;
+  margin: 0 auto;
+  border: 1px solid #EDEDED;
+}
 .btn-pr {
   width: 85%;
   height: 55px !important;
-  margin-left: 5%;
+  margin-left: 8%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -133,17 +153,15 @@ export default {
 .btn-pr2 {
   width: 85%;
   height: 55px !important;
-  margin-left: 5%;
+  margin-left: 8%;
   background: #ffffff !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
-  margin-top: 5%;
+  border-radius: 15px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
-  margin-top: 25%;
   text-align: center;
   margin-bottom: 5%;
   letter-spacing: -0.02em;

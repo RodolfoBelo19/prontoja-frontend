@@ -3,7 +3,7 @@
     <br /><br />
     <img src="../../assets/errorpay.png" style="margin-left: 12%" />
     <br /><br />
-    <h3 class="text-h3">Ups! teve um erro no pagamento</h3>
+    <h3 class="text-h3">Ups! teve um erro no <br> pagamento</h3>
     <v-btn elevation="2" class="btn-pr">Usar outra forma de pagamento</v-btn>
   </v-container>
 </template>
@@ -114,7 +114,7 @@ export default {
   margin-left: 5%;
   background: #59bb77 !important;
   box-shadow: 0px 5px 20px rgba(28, 64, 39, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-top: 5%;
   font-family: "Poppins";
   font-style: normal;
